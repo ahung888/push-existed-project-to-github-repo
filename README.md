@@ -3,6 +3,8 @@ push-existed-project-to-github-repo
 
 This repository demostrates how to push an existed local repository to GitHub
 
+# Push an existed local repo to GitHub
+
 ## step 1
 
 Create a GitHub repo on GitHub website
@@ -41,4 +43,50 @@ git push orign main
 
 The final git graph will be looked like this
 
-![Git Graph of merging two repositories which don't have related histories](git-graph.jpg)
+![Git Graph of merging two repositories which don't have related histories](images/git-graph-1.jpg)
+
+# Switch default branch
+
+[ *this is optional* ]
+
+Sometimes your default branches of local repo and remote repo are not the same name. If you want to choose one of them, just simply delete one and continue push new version to another one.
+
+If you want to choose the branch name from GitHub, like me, try to follow this step:
+
+
+1. switch local branch to main (GitHub default branch)
+```
+git checkout main
+```
+
+2. merge master branch into main branch
+```
+git merge master
+```
+
+3. push
+```
+git push origin main
+```
+
+Then, the current git graph will be looked like this
+
+![Git Graph of switch default branch](images/git-graph-2.jpg)
+
+# Delete unused branch
+
+[ *this is optional* ]
+
+- Delete local branch
+```
+git branch -d master
+```
+
+- Delete remote branch
+```
+git push -d origin master
+```
+
+After that, the final git graph will be looked like this
+
+![Git Graph of delete unused branch](images/git-graph-3.jpg)
