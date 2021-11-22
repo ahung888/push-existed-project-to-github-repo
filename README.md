@@ -27,7 +27,7 @@ git pull origin main --allow-unrelated-histories
 5. push the merged version to GitHub
 
 ```bash
-git push orign main
+git push origin main
 ```
 
 6. The final git graph will be looked like this
